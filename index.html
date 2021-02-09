@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Card App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="col-left">
+            <h2 id="headintTwo">PLEASE FILL OUT YOUR INFORMATION</h2>
+            <div class="left-container" >
+                <form>
+                    <label>Enter Your Full Name</label>
+                    <input type="text" id="inName" placeholder="Your Name"> <br>
+
+                    <label>Enter Your Id</label>
+                    <input type="number" id="inId" placeholder="Your Id"> <br>
+
+                    <label>Enter Your Admit Year</label>
+                    <input type="number" id="inYear" placeholder="Your Admit Year"> <br>
+
+                    <label>Enter Your D.O.B</label>
+                    <input type="date" id="InbirthDate" placeholder="Your D.O.B"> <br>
+
+                    <label>Enter Your Field</label>
+                    <input type="text" id="Infield" placeholder="Your Desired Field"> <br>
+
+                    <label for="file" class="upload">Upload An Image</label>
+                    <br> <br>
+                    <span id="character">*Chose one that Describe Your character</span>
+                    <input type="file" id="file" accept="image/*" onchange="LoadImage(event)">
+                </form>
+            </div>
+            <div class="buttons">
+                <button type="submit" onclick="PreviewData()" id="btnPreview">Preview</button>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <h2 id="heading">STUDENT ID CARD</h2>
+            <div class="right-container card">
+                <header>
+                    <div class="campus">
+                        <h2>Id Card</h2>
+                        <span>Web Developer</span>
+                    </div>
+                    <img src="logo.png" alt="image-logo" id="logo">
+                </header>
+                <div class="right-content">
+                    <img src="" id="imageDisplayed">
+                    <ul>
+                        <li id="name"></li>
+                        <li id="date"></li>
+                        <li id="year"></li>
+                        <li id="department"></li>
+                        <li id="listofID"> Id* <span id="id"></span></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
